@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phoenix Best Electricians - 24/7 licensed residential electrical services in Phoenix, AZ. Panel upgrades, EV chargers, ceiling fans, and troubleshooting. Call (602) 780-1140.">
+    <title>Phoenix Best Electricians | 24/7 Residential & Emergency Services</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS variables for color scheme & theme consistency */
+        :root {
+            --primary-bg: #0f172a;       /* Deep Midnight Slate */
+            --content-bg: #ffffff;       /* Pure White */
+            --surface-bg: #f8fafc;       /* Cool Light Gray */
+            --accent: #f59e0b;           /* Amber Orange */
+            --accent-hover: #d97706;     /* Darker Amber */
+            --accent-glow: rgba(245, 158, 11, 0.15);
+            --text-dark: #1e293b;        /* Dark Slate */
+            --text-muted: #64748b;       /* Muted Slate */
+            --success: #10b981;          /* Emerald Green */
+            --border-color: #e2e8f0;
+            --glass-bg: rgba(15, 23, 42, 0.85);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --max-width: 1280px;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--content-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--primary-bg);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            outline: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Utility classes */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.8rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            gap: 0.5rem;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary-bg);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+        }
+
+        .btn-phone {
+            background-color: #ef4444;
+            color: white;
+            animation: pulse-red 2s infinite;
+        }
+
+        .btn-phone:hover {
+            background-color: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        @keyframes pulse-red {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-bg);
+        }
+
+        .logo-text {
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: white;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0) 50%), var(--primary-bg);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--content-bg), transparent);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stars {
+            color: var(--accent);
+            display: flex;
+            gap: 2px;
+        }
+
+        .hero-badge-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .hero-content h1 {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            margin-bottom: 2.5rem;
+            max-width: 580px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .hero-feature-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .hero-feature-text h4 {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .hero-feature-text p {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 4px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .pulse-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ef4444;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .pulse-dot::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #ef4444;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: pulse-dot-anim 1.5s infinite;
+        }
+
+        @keyframes pulse-dot-anim {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .hero-overlay-text h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-overlay-text p {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        /* Emergency Bar */
+        .emergency-bar {
+            background-color: #ef4444;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .emergency-bar .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .emergency-bar a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        /* Section layout */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 4.5rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: var(--surface-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-image {
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            background-color: #cbd5e1;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-glow);
+            color: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .service-features-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .service-features-list svg {
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        /* About / Trust Section */
+        .about-section {
+            background-color: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .about-image-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-image-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .about-image-item:nth-child(2) {
+            transform: translateY(20px);
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-profile {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .team-member {
+            flex: 1;
+        }
+
+        .team-member-title {
+            font-weight: 700;
+            color: var(--primary-bg);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-member-role {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-bio {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Testimonials Slider Section */
+        .reviews-section {
+            background-color: var(--primary-bg);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews-section .section-header h2 {
+            color: white;
+        }
+
+        .reviews-slider-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .reviews-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .review-slide {
+            min-width: 100%;
+            padding: 1.5rem;
+        }
+
+        .review-card {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '“';
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 6rem;
+            color: rgba(245, 158, 11, 0.15);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .review-stars {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .review-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .review-author {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-meta {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .reviews-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .nav-arrow {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-arrow:hover {
+            background-color: var(--accent);
+            color: var(--primary-bg);
+            border-color: var(--accent);
+        }
+
+        .reviews-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot.active {
+            background-color: var(--accent);
+            transform: scale(1.2);
+        }
+
+        /* Booking / Booking form */
+        .booking-section {
+            background-color: var(--surface-bg);
+            position: relative;
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .booking-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-info p {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .booking-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .booking-step-item {
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .booking-step-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--primary-bg);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .booking-step-text h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .booking-step-text p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .form-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-color);
+            background-color: white;
+            border-radius: 8px;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Form Success Modal */
+        .form-success-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .form-success-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            animation: scale-up 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes scale-up {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .form-success-overlay h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-success-overlay p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: var(--surface-bg);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.05rem;
+            user-select: none;
+            color: var(--primary-bg);
+            gap: 1rem;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            background-color: white;
+            border-top: 0 solid var(--border-color);
+        }
+
+        .faq-answer-content {
+            padding: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 250px;
+            border-top-width: 1px;
+        }
+
+        .faq-chevron {
+            transition: var(--transition);
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        /* Map & Location Section */
+        .map-section {
+            padding: 80px 0 0;
+            background-color: var(--surface-bg);
+            position: relative;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+
+        .map-iframe-container {
+            height: 450px;
+            background-color: #e2e8f0;
+        }
+
+        .map-iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-details {
+            background-color: white;
+            padding: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .map-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .map-details p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-info-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-glow);
+            color: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-info-text h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-info-text p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-bg);
+            color: #94a3b8;
+            padding: 50px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo .logo-text {
+            font-size: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-badge {
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-features {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            .hero-image-container img {
+                height: 400px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+            }
+
+            .about-images {
+                order: 2;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .booking-grid {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+            }
+
+            .booking-info {
+                text-align: center;
+            }
+
+            .booking-steps {
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: left;
+            }
+
+            .form-card {
+                max-width: 600px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .map-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-iframe-container {
+                height: 350px;
+            }
+
+            .map-details {
+                padding: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta .btn-outline {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-cta {
+                gap: 0.5rem;
+            }
+
+            /* Mobile Menu Active */
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-bg);
+                padding: 2rem;
+                border-bottom: 2px solid var(--accent);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .about-image-item img {
+                height: 200px;
+            }
+
+            .review-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .review-text {
+                font-size: 1rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo-group" aria-label="Phoenix Best Electricians Home">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 22C11.22 22 11 21.78 11 21.5V13H4.5C4.12 13 3.82 12.64 3.96 12.28L8.96 1.78C9.09 1.48 9.4 1.28 9.73 1.28H15.5C15.78 1.28 16 1.5 16 1.78V10H22.5C22.88 10 23.18 10.36 23.04 10.72L18.04 21.22C17.91 21.52 17.6 21.72 17.27 21.72H11.5V22Z"/></svg>
+                    </div>
+                    <span class="logo-text">Phoenix Best<span> Electricians</span></span>
+                </a>
+                
+                <nav class="nav-links" id="navLinks">
+                    <a href="#services" onclick="toggleMenu()">Services</a>
+                    <a href="#about" onclick="toggleMenu()">Meet the Team</a>
+                    <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+                    <a href="#booking" onclick="toggleMenu()">Book Service</a>
+                    <a href="#faq" onclick="toggleMenu()">FAQs</a>
+                </nav>
+
+                <div class="nav-cta">
+                    <a href="tel:+16027801140" class="btn btn-phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>(602) 780-1140</span>
+                    </a>
+                    <a href="#booking" class="btn btn-outline">Book Online</a>
+                    
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <div class="hero-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <span class="hero-badge-text"><strong>4.7 Rating</strong> (124+ Verified Google Reviews)</span>
+                    </div>
+                    <h1>Phoenix's Premier <span>24/7 Residential</span> Electricians</h1>
+                    <p>From emergency power outages and water-damaged breaker panels to EV charger setups and ceiling fan installations, Brayden, Tracy, and the crew deliver fast, professional, and code-perfect electrical solutions.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn btn-primary">
+                            <span>Schedule Service Online</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="tel:+16027801140" class="btn btn-outline" style="border-color: rgba(255,255,255,0.25)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>Call (602) 780-1140</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="hero-feature-item">
+                            <div class="hero-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div class="hero-feature-text">
+                                <h4>Fast Local Dispatch</h4>
+                                <p>Right here in Phoenix</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature-item">
+                            <div class="hero-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div class="hero-feature-text">
+                                <h4>Licensed & Safe</h4>
+                                <p>Code-compliant installations</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature-item">
+                            <div class="hero-feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="hero-feature-text">
+                                <h4>24/7 Availability</h4>
+                                <p>Late-night emergencies welcome</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-container">
+                        <img src="hero_bg.png" alt="Clean modern residential lighting in Phoenix home">
+                        <div class="hero-image-overlay">
+                            <div class="pulse-dot"></div>
+                            <div class="hero-overlay-text">
+                                <h4>Active Emergency Response Line</h4>
+                                <p>Dispatching now in Phoenix & surrounding areas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Call Bar -->
+    <div class="emergency-bar">
+        <div class="container">
+            <span>🚨 Facing an Electrical Emergency? Burning Smell or Tripped Breaker?</span>
+            <a href="tel:+16027801140">Call Our Hot-Line Instantly: (602) 780-1140</a>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Professional Services</span>
+                <h2>Core Electrical Solutions We Provide</h2>
+                <p>We handle all aspects of residential electrical service with precision, speed, and safety. Here are our specialties:</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: EV Charger -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="ev_charger.png" alt="Tesla EV Wall Connector installation next to an electric car">
+                    </div>
+                    <div class="service-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><circle cx="12" cy="10" r="2"/><path d="M12 14v4"/></svg>
+                    </div>
+                    <h3>EV Charger Installations</h3>
+                    <p>Complete garage electrical upgrades, cable running, trenching, and dedicated 240V circuits to support your new Tesla or standard Level 2 EV charging station safely.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tesla Wall Connector Certification
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Permit & Code-Compliant Routing
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Trenching & Detached Garage Wiring
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Panel Upgrade -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="panel_upgrade.png" alt="Professionally upgraded clean electrical breaker panel">
+                    </div>
+                    <div class="service-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+                    </div>
+                    <h3>Panel Upgrades & Breaker Services</h3>
+                    <p>Upgrade old 150Amp services to modern 200Amp configurations. We handle emergency box replacements, clean water-damaged bus boards, and replace faulty breakers that won't reset.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Emergency Breaker Replacements
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Water Damage & Panel Fires Response
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Generator Interlock Switches
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Ceiling Fan & Fixtures -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="ceiling_fan.png" alt="Modern ceiling fan spinning slowly in a bright living room">
+                    </div>
+                    <div class="service-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v6"/><path d="M12 16v6"/><path d="M2 12h6"/><path d="M16 12h6"/></svg>
+                    </div>
+                    <h3>Ceiling Fans & Light Fixtures</h3>
+                    <p>Keep your home cool and bright. Professional installation of ceiling fans, recessed lighting (high ceilings up to 20ft), pendant lights, walkway illumination, and smart dimmers.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            High-Ceiling Installations (up to 20ft)
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Ballast Upgrades & LED Retrofitting
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Dimmer Switches & Smart Integrations
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team / About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-image-item">
+                        <img src="hero_bg.png" alt="Happy customer with newly upgraded home electrical work">
+                    </div>
+                    <div class="about-image-item">
+                        <img src="panel_upgrade.png" alt="Tracy Nelson testing circuit breaker panel safety compliance">
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-tag">Meet the Experts</span>
+                    <h2>Local, Friendly Electricians Who Care About Your Safety</h2>
+                    <p>We are a family-owned team dedicated exclusively to residential electrical services in Phoenix. We pride ourselves on transparent pricing, clear explanations of code standards, and leaving your house cleaner than we found it.</p>
+                    <p>Unlike massive corporate franchises that use aggressive sales reps, when you work with us, you speak directly with professional electricians who diagnose issues honestly.</p>
+
+                    <div class="team-profile">
+                        <div class="team-member">
+                            <div class="team-member-title">Brayden</div>
+                            <div class="team-member-role">Owner & Lead Electrician</div>
+                            <div class="team-member-bio">Brayden specializes in advanced electrical system troubleshooting, panel upgrades, and code verification for residential building permits. He loves guiding homeowners step-by-step.</div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-member-title">Tracy</div>
+                            <div class="team-member-role">Lead Electrical Specialist</div>
+                            <div class="team-member-bio">Tracy Nelson is our resident installation wizard. From high-ceiling fan placements to complex outdoor conduit layouts for EV charging and pool equipment, Tracy ensures everything looks neat and performs flawlessly.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Customer Reviews</span>
+                <h2 style="color: white;">What Your Phoenix Neighbors Say</h2>
+                <p style="color: #94a3b8;">With over 124 verified 5-star reviews on Google Maps, we work hard to keep our client service standards at the absolute peak.</p>
+            </div>
+
+            <div class="reviews-slider-container">
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Review 1 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="review-text">"Outstanding customer service! Our main breaker suddenly stopped working late at night. Early the next morning, I received a call right at 8:00, and they quickly sent out an electrician to handle our emergency. I was able to text a photo of the faulty breaker, and Brayden arrived with the right replacement part. Everything was fixed and our power was restored by 10:00."</p>
+                            <h4 class="review-author">Brandon Hubbard</h4>
+                            <span class="review-meta">Local Resident • 5-Star Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="review-text">"Outstanding service from this electrician team. I chose them because of their great reviews and I'm glad I did. Tracy installed a ceiling fan for me and also fixed a problem with a light fixture that someone else put in before. Everything works perfectly now."</p>
+                            <h4 class="review-author">L Malone</h4>
+                            <span class="review-meta">Local Guide • 5-Star Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="review-text">"I contacted their emergency line late on a Friday night when my family had a wiring issue at our home in Phoenix. Brayden answered the phone and was incredibly helpful, patiently guiding us step by step to troubleshoot the electrical problem ourselves. He didn’t charge us anything! Highly recommend!"</p>
+                            <h4 class="review-author">Brandi Knight</h4>
+                            <span class="review-meta">Phoenix Resident • 5-Star Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="review-text">"It's not always easy to find a reliable electrician in Phoenix who handles home repairs, but I had a great experience with Brayden. I had a circuit breaker that wouldn't reset. He quickly figured out what was wrong and fixed it at a reasonable price. Highly recommend!"</p>
+                            <h4 class="review-author">Todd Hall</h4>
+                            <span class="review-meta">Local Guide • 5-Star Google Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-nav">
+                <button class="nav-arrow" id="prevBtn" aria-label="Previous Review">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                </button>
+                <div class="reviews-dots" id="dotsContainer"></div>
+                <button class="nav-arrow" id="nextBtn" aria-label="Next Review">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Section -->
+    <section class="section booking-section" id="booking">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-info">
+                    <span class="section-tag">Instant Scheduling</span>
+                    <h2>Secure Your Appointment Today</h2>
+                    <p>Tell us what electrical services you need, and we'll contact you within 60 minutes during business hours to confirm a dispatch window. Skip the phone queue completely!</p>
+                    
+                    <div class="booking-steps">
+                        <div class="booking-step-item">
+                            <div class="booking-step-num">1</div>
+                            <div class="booking-step-text">
+                                <h4>Submit details online</h4>
+                                <p>Provide details about the issue and select your preferred times.</p>
+                            </div>
+                        </div>
+                        <div class="booking-step-item">
+                            <div class="booking-step-num">2</div>
+                            <div class="booking-step-text">
+                                <h4>Get a text/call confirmation</h4>
+                                <p>Brayden or one of our team members will confirm your dispatch details.</p>
+                            </div>
+                        </div>
+                        <div class="booking-step-item">
+                            <div class="booking-step-num">3</div>
+                            <div class="booking-step-text">
+                                <h4>Job done, code-compliant</h4>
+                                <p>We arrive on time, fix the problem correctly, and back it with a warranty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="form-card">
+                        <form id="bookingForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" class="form-control" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="(602) 555-0199" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address (Optional)</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType">Service Needed *</label>
+                                <select id="serviceType" class="form-control" required>
+                                    <option value="" disabled selected>Select an electrical service...</option>
+                                    <option value="emergency">Emergency Repair (Outages, Sparks)</option>
+                                    <option value="panel">Breaker Box / Panel Upgrade</option>
+                                    <option value="ev">Tesla / EV Charger Installation</option>
+                                    <option value="fan">Ceiling Fan or Light Fixture</option>
+                                    <option value="wiring">Outlets, Switches & Wiring</option>
+                                    <option value="other">Other Electrical Issue</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Describe your electrical issue *</label>
+                                <textarea id="message" class="form-control" placeholder="Tell us how we can help. For example: Breaker won't reset, installing a ceiling fan in the master bedroom, etc." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span>Request Priority Booking</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </button>
+                        </form>
+
+                        <div class="form-success-overlay" id="formSuccess">
+                            <div class="success-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <h3>Booking Request Received!</h3>
+                            <p>Thank you. We have received your request. Brayden or Tracy Nelson will text/call you shortly at the phone number provided to finalize your booking window.</p>
+                            <button class="btn btn-primary" onclick="resetFormCard()">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Got Questions?</span>
+                <h2>Frequently Answered Questions</h2>
+                <p>We believe in absolute transparency. Here are quick answers to some common questions we get from homeowners.</p>
+            </div>
+
+            <div class="faq-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are you licensed, bonded, and insured in Arizona?</span>
+                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes. We ensure all residential jobs are executed strictly to the 2023 National Electrical Code (NEC) standards. When doing jobs that require municipal code closures, we coordinate with engineers and pull all required permits so your insurance remains fully protected.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How quickly can you respond to an emergency outage?</span>
+                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We pride ourselves on our 24/7 responsiveness. For severe situations (smoke, burning smell in electrical boxes, total loss of power in the summer), we immediately dispatch a technician. Typically, we are on site in under two hours.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you install EV chargers and run cabling to detached garages?</span>
+                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Tracy and Brayden specialize in installing Tesla and universal EV charging equipment. We run dedicated 240V lines, handle complex concrete digging or underground trenching to detached garages, and ensure your panel has sufficient headroom to support charging loads.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if my circuit breaker refuses to reset?</span>
+                        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            If a breaker trips immediately when reset, do not force it. It indicates a safety lock preventing an active short circuit or overload. Call us at (602) 780-1140 immediately. We will help you troubleshoot it safely or send Brayden out to replace the damaged panel components.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Details Section -->
+    <section class="section map-section">
+        <div class="container">
+            <div class="map-grid">
+                <div class="map-iframe-container">
+                    <!-- Google Maps Embed centered on 8929 N Central Ave, Phoenix -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.6570952042125!2d-112.07596802422774!3d33.56705147334469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b6d17359dd2a7%3A0x472825f7a35bcd31!2sPhoenix%20Best%20Electricians!5e0!3m2!1sen!2sus!4v1717592400000!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="map-details">
+                    <h3>Service Area & HQ</h3>
+                    <p>Located in the heart of Phoenix, we proudly serve homeowners throughout the valley, including North Phoenix, Scottsdale, Tempe, Glendale, and Peoria.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h5>Headquarters Address</h5>
+                                <p>8929 N Central Ave #53C<br>Phoenix, AZ 85020<br>Floor 1 · Marketplace At Central</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h5>Phone Support</h5>
+                                <p>(602) 780-1140 (Available 24/7)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 22C11.22 22 11 21.78 11 21.5V13H4.5C4.12 13 3.82 12.64 3.96 12.28L8.96 1.78C9.09 1.48 9.4 1.28 9.73 1.28H15.5C15.78 1.28 16 1.5 16 1.78V10H22.5C22.88 10 23.18 10.36 23.04 10.72L18.04 21.22C17.91 21.52 17.6 21.72 17.27 21.72H11.5V22Z"/></svg>
+                    </div>
+                    <span class="logo-text">Phoenix Best<span> Electricians</span></span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#about">Meet the Team</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#booking">Book Online</a>
+                    <a href="#faq">FAQs</a>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom">
+                    <p>© 2026 Phoenix Best Electricians. All rights reserved.</p>
+                    <p>Designed for fast local bookings. ROC License verification upon dispatch.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Sticky Header scroll background change
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '0.5rem 0';
+                header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.padding = '0';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Animate hamburger lines
+            const spans = menuToggle.querySelectorAll('span');
+            spans[0].style.transform = navLinks.classList.contains('active') ? 'rotate(45deg) translate(6px, 6px)' : 'none';
+            spans[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
+            spans[2].style.transform = navLinks.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
+        });
+
+        function toggleMenu() {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const spans = menuToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+
+        // Testimonial Carousel Slider Logic
+        const track = document.getElementById('reviewsTrack');
+        const slides = Array.from(track.children);
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+        
+        let currentIndex = 0;
+
+        // Create navigation indicator dots
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => moveToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsContainer.children);
+
+        function updateSliderPosition() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function moveToSlide(index) {
+            currentIndex = index;
+            updateSliderPosition();
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // wrap around
+            }
+            updateSliderPosition();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slides.length - 1; // wrap around
+            }
+            updateSliderPosition();
+        });
+
+        // Auto slide every 8 seconds
+        let autoSlide = setInterval(() => {
+            nextBtn.click();
+        }, 8000);
+
+        // Reset timer on user interaction
+        [nextBtn, prevBtn, dotsContainer].forEach(element => {
+            element.addEventListener('click', () => {
+                clearInterval(autoSlide);
+                autoSlide = setInterval(() => {
+                    nextBtn.click();
+                }, 8000);
+            });
+        });
+
+        // Booking Form Interactive Submission Simulation
+        const bookingForm = document.getElementById('bookingForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const submitBtn = bookingForm.querySelector('.submit-btn');
+            const submitBtnText = submitBtn.querySelector('span');
+            
+            // Add Loading Spinner State
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.pointerEvents = 'none';
+            submitBtnText.textContent = 'Submitting Request...';
+
+            setTimeout(() => {
+                // Show Success Screen overlay inside card
+                formSuccess.classList.add('show');
+                
+                // Clear form inputs
+                bookingForm.reset();
+                
+                // Reset button
+                submitBtn.style.opacity = '1';
+                submitBtn.style.pointerEvents = 'auto';
+                submitBtnText.textContent = 'Request Priority Booking';
+            }, 1500);
+        });
+
+        function resetFormCard() {
+            formSuccess.classList.remove('show');
+        }
+
+        // Accordion FAQ expand/collapse logic
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Check if already active
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
