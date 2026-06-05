@@ -1263,31 +1263,82 @@
             }
         }
 
+        /* Nav Overlay for mobile flyout */
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 998;
+        }
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
         @media (max-width: 768px) {
-            .nav-links, .nav-cta .btn-outline {
+            .nav-cta .btn-outline {
+                display: none;
+            }
+
+            .btn-phone {
+                padding: 0.85rem;
+                border-radius: 50%;
+                gap: 0;
+            }
+
+            .btn-phone span {
                 display: none;
             }
 
             .menu-toggle {
                 display: flex;
+                z-index: 1001;
             }
 
             .nav-cta {
                 gap: 0.5rem;
             }
 
-            /* Mobile Menu Active */
-            .nav-links.active {
+            /* Mobile Menu Flyout Panel (Right to Left) */
+            .nav-links {
                 display: flex;
                 flex-direction: column;
-                position: absolute;
-                top: 80px;
-                left: 0;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: 100vh;
+                background-color: rgba(15, 23, 42, 0.96);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                padding: 6.5rem 2rem 2rem;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                gap: 2.5rem;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+                font-weight: 600;
                 width: 100%;
-                background-color: var(--primary-bg);
-                padding: 2rem;
-                border-bottom: 2px solid var(--accent);
-                box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                padding-bottom: 0.85rem;
             }
 
             .hero-content h1 {
@@ -1359,6 +1410,7 @@
                 </div>
             </div>
         </div>
+        <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
     </header>
 
     <!-- Hero Section -->
@@ -1902,28 +1954,23 @@
             }
         });
 
-        // Mobile Menu Toggle
+        // Mobile Menu Toggle & Flyout Animation
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            // Animate hamburger lines
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = navLinks.classList.contains('active') ? 'rotate(45deg) translate(6px, 6px)' : 'none';
-            spans[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navLinks.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
-        });
+        const navOverlay = document.getElementById('navOverlay');
 
         function toggleMenu() {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+            const isActive = navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active', isActive);
+            
+            // Animate hamburger lines
+            const spans = menuToggle.querySelectorAll('span');
+            spans[0].style.transform = isActive ? 'rotate(45deg) translate(6px, 6px)' : 'none';
+            spans[1].style.opacity = isActive ? '0' : '1';
+            spans[2].style.transform = isActive ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
         }
+
+        menuToggle.addEventListener('click', toggleMenu);
 
         // Testimonial Carousel Slider Logic
         const track = document.getElementById('reviewsTrack');
